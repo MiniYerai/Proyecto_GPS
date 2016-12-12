@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fondo"
+    android:background="@color/place_autocomplete_prediction_primary_text"
+    android:backgroundTint="@color/place_autocomplete_prediction_primary_text">
+
+    <!--<ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        android:id="@+id/ibClose"
+        android:background="@color/transparente"
+        android:scaleType="fitEnd"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp" />-->
+
+    <ImageView
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:id="@+id/ivCompleta"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:layout_height="400dp" />
+</LinearLayout>

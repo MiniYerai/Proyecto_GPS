@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item
+                android:id="@+id/menu_nota"
+                android:title="@string/mAddNota"
+                android:icon="@drawable/ic_action_edit" />
+            <item
+                android:id="@+id/menu_lista"
+                android:title="@string/addlista"
+                android:icon="@drawable/ic_action_list" />
+            <item
+                android:id="@+id/menu_audio"
+                android:title="@string/addAudio2"
+                android:icon="@drawable/ic_action_mic" />
+    <item android:title="@string/m_mapa"
+        android:id="@+id/menu_mapa"
+        android:icon="@android:drawable/ic_dialog_map" />
+    <item
+                android:id="@+id/menu_opcion_1"
+                android:title="@string/mBuscar"
+                android:icon="?android:attr/actionModeWebSearchDrawable" />
+            <item
+                android:id="@+id/menu_opcion_2"
+                android:title="@string/mDel"
+                android:icon="@drawable/ic_action_del" />
+            <item android:title="@string/mConfig"
+                android:id="@+id/menu_opcion_3"
+                android:icon="@drawable/ic_action_config" />
+</menu>

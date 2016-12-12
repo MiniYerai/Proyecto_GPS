@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ruben.dam.izv.com.proyecto_0">
+
+    <!-- PERMISO DE GALERIA DE IMAGENES -->
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <!-- PERMISOS DE ALMACENAMIENTO EXTERNO DE LECTURA Y ESCRITURA -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- permiso de camara -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Sincronización -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <!-- Red -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- AUTENTIFICACION -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <!-- LOCALIZACIÓN -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!-- ACTIVIDAD PRINCIPAL -->
+        <activity
+            android:name=".vistas.vistas.main.VistaQuip"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- ACTIVIDAD NOTA -->
+        <activity
+            android:name=".vistas.vistas.notas.VistaNota"
+            android:configChanges="screenSize|orientation"
+            android:parentActivityName=".vistas.vistas.main.VistaQuip">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".vistas.vistas.main.VistaQuip" />
+        </activity>
+        <!-- ACTIVIDAD AUDIO -->
+        <activity
+            android:name=".vistas.vistas.audios.VistaAudio"
+            android:configChanges="screenSize|orientation"
+            android:parentActivityName=".vistas.vistas.notas.VistaNota">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".vistas.vistas.notas.VistaNota" />
+        </activity>
+
+        <provider
+            android:name=".vistas.contentprovider.Provider"
+            android:authorities="ruben.dam.izv.com.proyecto_0.vistas.contentprovider"
+            android:enabled="true"
+            android:exported="false"
+            android:syncable="true" />
+
+        <!-- SERVICIO DE AUTENTICACIÓN -->
+        <service android:name=".vistas.Conexion.AuthenticationService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <!-- SERVICIO DE SINCRONIZACIÓN -->
+        <service
+            android:name=".vistas.Conexion.SyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+
+        <activity
+            android:name=".vistas.vistas.gps.VistaLocalizacion"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_vista_localizacion"></activity>
+        <activity
+            android:name=".vistas.vistas.notas.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+    </application>
+
+</manifest>

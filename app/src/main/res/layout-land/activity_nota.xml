@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".vistas.vistas.notas.VistaNota"
+    android:orientation="vertical"
+    android:id="@+id/llcolor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/color"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="bottom"
+        android:layout_gravity="bottom"
+        android:baselineAlignBottom="false"
+        android:layout_alignParentBottom="false"
+        android:paddingTop="10dp">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_action_local"
+            android:id="@+id/ibLocal"
+            android:layout_weight="1"
+            android:background="@color/transparente" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_action_imagen"
+            android:id="@+id/btAddImg"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_action_mic"
+            android:id="@+id/btAddAudio"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_action_list"
+            android:id="@+id/btAddLista"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_action_color"
+            android:id="@+id/ibColor"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/pdf2"
+            android:id="@+id/btnPDF"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etTitulo"
+                        android:hint="@string/titulo"
+                        android:paddingLeft="5dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:ems="10"
+                            android:id="@+id/etNota"
+                            android:hint="@string/nota"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_action_hablar"
+                            android:id="@+id/btnHablar"
+                            android:background="@android:color/transparent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/LlImagen">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:maxHeight="300dp"
+                            android:id="@+id/iv"
+                            android:adjustViewBounds="true"
+                            android:layout_below="@+id/show_options_button"
+                            android:scaleType="fitCenter"
+                            android:layout_weight="0.2"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:paddingBottom="16dp"
+                android:layout_weight="1">
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="@string/fecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvFecha"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal" />
+                    </LinearLayout>
+
+                </android.support.design.widget.CoordinatorLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<include layout="@layout/activity_dialogo_fragment"/>-->
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_dialogo_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context="vistas.vistas.notas.DialogoFragment">
+        <Button
+            android:text="@string/mAddImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btAddImg"
+            android:gravity="left|center_vertical|center_horizontal"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/holo_orange_dark"
+            android:drawableLeft="@drawable/ic_action_imagen"
+            android:drawablePadding="20dp" />
+
+        <Button
+            android:text="@string/btAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btAddAudio"
+            android:gravity="left|center_vertical|center_horizontal"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/holo_orange_dark"
+            android:drawableLeft="@drawable/ic_action_mic"
+            android:drawablePadding="20dp" />
+
+        <Button
+            android:text="@string/mAddList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btaddList"
+            android:background="@android:color/transparent"
+            android:gravity="left|center_vertical|center_horizontal"
+            android:paddingLeft="10dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/holo_orange_dark"
+            android:drawableLeft="@drawable/ic_action_list"
+            android:drawablePadding="20dp" />
+
+    </LinearLayout>-->
+
+</LinearLayout>

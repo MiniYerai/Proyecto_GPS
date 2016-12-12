@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingTop="20dp"
+    android:backgroundTint="?android:attr/colorControlHighlight"
+    android:gravity="center_horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/naranja"
+                app:backgroundTint="?attr/colorPrimaryDark"
+                app:elevation="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/verde"
+                android:layout_toEndOf="@+id/verde"
+                android:layout_weight="1" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/verde"
+                app:backgroundTint="@android:color/holo_green_light"
+                app:elevation="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/azul"
+                android:layout_toEndOf="@+id/azul"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/azul"
+                app:backgroundTint="@android:color/holo_blue_bright"
+                app:elevation="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/morado"
+                android:layout_toEndOf="@+id/morado"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/morado"
+                app:backgroundTint="@android:color/holo_purple"
+                app:elevation="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/azul_oscuro"
+                app:backgroundTint="@color/azul_oscuro"
+                app:elevation="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/magenta"
+                app:backgroundTint="@color/colorAccent"
+                app:elevation="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/naranja"
+                android:layout_toEndOf="@+id/naranja"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal" />
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/rojo"
+                app:backgroundTint="@color/red_light"
+                app:elevation="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/naranja"
+                android:layout_toEndOf="@+id/naranja"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp" />
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/blanco"
+                app:backgroundTint="@android:color/white"
+                app:elevation="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/naranja"
+                android:layout_toEndOf="@+id/naranja"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/gris"
+                app:backgroundTint="@android:color/darker_gray"
+                app:elevation="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/naranja"
+                android:layout_toEndOf="@+id/naranja"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

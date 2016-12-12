@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ruben.dam.izv.com.proyecto_0.vistas.vistas.main.VistaQuip">
+
+    <item
+        android:id="@+id/action_buscar"
+
+        android:title="@string/mBuscar"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_name"
+        android:orderInCategory="1"
+        app:actionViewClass="android.widget.SearchView"/>
+    <item android:id="@+id/action_sync" android:title="@string/action_sync"
+        android:orderInCategory="2"
+        android:icon="@android:drawable/ic_popup_sync"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_del"
+
+        android:title="@string/mDel"
+        android:icon="@drawable/ic_action_del"
+        app:showAsAction="never"
+        android:orderInCategory="3" />
+    <item android:title="@string/mConfig" android:id="@+id/action_setins"
+        android:orderInCategory="3"
+        android:showAsAction="never" />
+</menu>
